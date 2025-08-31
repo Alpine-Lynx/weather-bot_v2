@@ -4,8 +4,8 @@
 const { Client, GatewayIntentBits, REST, Routes, EmbedBuilder } = require('discord.js');
 const weather = require('weather-js');
 
-const BOT_TOKEN = 'ここにTokenを入れてください';
-const CLIENT_ID = 'ここにCLIENTIDを入れてください';
+const BOT_TOKEN = process.env.DISCORD_TOKEN;
+const CLIENT_ID = process.env.CLIENT_ID;
 
 const client = new Client({ intents: [GatewayIntentBits.Guilds] });
 
